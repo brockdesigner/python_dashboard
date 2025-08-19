@@ -1,0 +1,33 @@
+
+[data-testid="stPlotlyChart"] {
+    border-radius: 20px !important;
+    background: #111827 !important;
+    padding: 0px !important; /* Padding reduzido para evitar cortes */
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+    overflow: visible !important; /* Permite que o gráfico "respire" */
+}
+
+/* Ajusta o contêiner interno do Plotly */
+[data-testid="stPlotlyChart"] > div {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* Corrige o SVG/Canvas do Plotly para evitar cortes */
+[data-testid="stPlotlyChart"] svg.main-svg {
+    overflow: visible !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+
+/* Ajusta o gráfico de pizza (se for o caso) */
+[data-testid="stPlotlyChart"] .pie path {
+    transform-box: fill-box !important;
+    transform-origin: center !important;
+}
+
