@@ -250,8 +250,8 @@ try:
     st.dataframe(df_filtrado, use_container_width=True, hide_index=True)
 
     # FOOTER
-    #st.markdown("---")
-    #st.markdown("<p style='text-align: center; color: #84BBD6;'>Todos os direitos reservados @brockdesigner</p>", unsafe_allow_html=True)
+    st.markdown("---")
+    st.markdown("<p style='text-align: center; color: #84BBD6;'>Desenvolvido por @brockdesigner</p>", unsafe_allow_html=True)
 
 except FileNotFoundError:
     st.error(f"Erro: Arquivo `{arquivo_selecionado}` não encontrado. Por favor, certifique-se que o arquivo está no mesmo diretório que o script.")
